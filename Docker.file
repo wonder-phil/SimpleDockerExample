@@ -5,7 +5,4 @@ COPY *.txt /home/.
 RUN apk add --update python3 py3-pip 
 RUN python3 -m venv /opt/venv
 RUN /opt/venv/bin/pip install -r /home/requirements.txt
-#RUN pip install --no-cache-dir -r requirements.txt
-#RUN pipx install Flask>=2.0.2 
-#RUN apk add Flask>=2.0.2
 CMD [ "/opt/venv/bin/python", "-m" , "flask", "run", "--host=0.0.0.0"]
